@@ -54,14 +54,14 @@ filtered_collections = (f"{nft_df_filtered.shape[0]:,}")
 filtered_sales = (f"{nft_df_filtered['Sales'].sum():,}")
 
 filtered_highlight = """
-### Total Sales: ${}
-### Number of Collaections: {}
+##### *Total Sales:* ${}
+##### *Number of Collaections:* {}
 """.format(filtered_sales, filtered_collections)
 
 filtered_highlight
 
 nft_df_filtered_plot = alt.Chart(nft_df_filtered).mark_circle().encode(
-     x='Owners', y='Buyers', size='Sales', color='Txns', tooltip=['Owners', 'Buyers', 'Sales', 'Txns'])
+     x='Owners', y='Buyers', size='Sales', color='Txns', tooltip=['Collections', 'Owners', 'Buyers', 'Sales', 'Txns'])
 
 st.altair_chart(nft_df_filtered_plot, use_container_width=True)
 
