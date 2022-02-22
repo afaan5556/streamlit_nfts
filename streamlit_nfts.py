@@ -29,7 +29,6 @@ for i in ["Sales", "Buyers", "Txns", "Owners"]:
     nft_df[i] = nft_df[i].apply(lambda x: np.nan_to_num(x))
     nft_df[i] = nft_df[i].astype(int)
 
-
 """
 ### Basic charts and filters
 A couple of slider filter controlled charts of that data? Streamlit can do it with a few lines of code!
@@ -60,15 +59,6 @@ filtered_highlight = """
 """.format(filtered_sales, filtered_collections)
 
 filtered_highlight
-
-
-# nft_df_filtered_plot = nft_df_filtered.plot.scatter(x='Owners',
-#     y='Buyers',
-#     s='Sales',
-#     c='Txns'
-#     )
-
-# nft_df_filtered_plot
 
 nft_df_filtered_plot = alt.Chart(nft_df_filtered).mark_circle().encode(
      x='Owners', y='Buyers', size='Sales', color='Txns', tooltip=['Owners', 'Buyers', 'Sales', 'Txns'])
