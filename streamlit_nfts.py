@@ -55,7 +55,7 @@ filtered_sales = (f"{nft_df_filtered['Sales'].sum():,}")
 
 filtered_highlight = """
 ##### *Total Sales:* ${}
-##### *Number of Collaections:* {}
+##### *Number of Collections:* {}
 """.format(filtered_sales, filtered_collections)
 
 filtered_highlight
