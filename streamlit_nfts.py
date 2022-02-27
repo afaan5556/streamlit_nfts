@@ -3,7 +3,6 @@ import streamlit as st
 import numpy as np
 import altair as alt
 from PIL import Image
-import plotly.figure_factory as ff
 import scipy as sp
 import plotly.express as px
 
